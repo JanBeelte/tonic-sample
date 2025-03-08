@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package calc;
+
+service Calc {
+  rpc Add(CalcReq) returns (CalcResp);
+  rpc Divide(CalcReq) returns (CalcResp);
+}
+
+message CalcReq {
+  int64 a = 1;
+  int64 b = 2;
+}
+
+message CalcResp { int64 result = 1; }
